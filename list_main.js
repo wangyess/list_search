@@ -72,7 +72,7 @@
             var iy_1 = item_list.complete;
             var input = list_form.querySelector('[name=title]');
             var inp = list_form.querySelector('[name=id]');
-            var iy= list_form.querySelector('[name=complete]');
+            var iy = list_form.querySelector('[name=complete]');
             input.value = val;
             inp.value = id_1;
             iy.value = iy_1;
@@ -105,6 +105,7 @@
             if (item.complete === "false") {
                 item.complete = 'true';
                 b.updata_item(id, item);
+
                 render();
                 return;
             }
@@ -130,17 +131,23 @@
         var del_item;
         var up_item;
         var gou_xuan;
+        var label_1;
+        var time_style;
+        var title_style;
         comment.forEach(function (list_item) {
             var mydiv = document.createElement('div');
             mydiv.classList.add('one');
             mydiv.classList.add('clear');
             mydiv.innerHTML = `
                <span> ${list_item.id}</span>
+               <label for="check_${list_item.id}"></label>
                <input type="checkbox" name="oo" id="check_${list_item.id}">
-               <span style="padding-left: 20px">${list_item.title}</span>
+               <span id="title_${list_item.id}">${list_item.title}</span>
+               <span id="time_${list_item.id}">${list_item.time__t}</span>
                <span id="del_btn_${list_item.id}" class="fa fa-trash">删除</span>
                <span id="btn_${list_item.id}" class="fa fa-edit">编辑</span>
         `;
+            //判断渲染到什么位置
             if (list_item.complete === "false") {
                 list_div.appendChild(mydiv);
             }
@@ -148,16 +155,29 @@
                 list_w_div.appendChild(mydiv);
             }
 
+            //title 样式
+            title_style=document.querySelector('#title_'+list_item.id);
+            title_style.classList.add('title_style1');
 
+            //time 样式
+            time_style=document.querySelector('#time_'+list_item.id);
+            time_style.classList.add('time_style1');
+
+            //label
+            label_1 = document.querySelector('[for=check_' + list_item.id + ']');
+            label_1.classList.add('label_1');
+
+            //复选框点击事件
             gou_xuan = document.querySelector('#check_' + list_item.id);
             gou_xuan.classList.add('gou-xuan');
             gg_lou(gou_xuan, list_item.id);
 
+            //删除
             del_item = document.querySelector('#del_btn_' + list_item.id);
-            console.log(del_item);
             del_item.classList.add('del_style');
             bind_click(del_item, list_item.id);
 
+            //修改
             up_item = document.querySelector('#btn_' + list_item.id);
             up_item.classList.add('up_style');
             bind_edit(up_item, list_item.id);
