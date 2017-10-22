@@ -129,7 +129,6 @@
             }
         });
     }
-
     //渲染查看内容
     function render_1(item) {
         var ca_z = document.createElement('div');

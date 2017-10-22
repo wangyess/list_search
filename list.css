@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clear:before,
+.clear:after{
+    content:'';
+    display: block;
+    clear: both;
+}
+.gou-xuan{
+    font-size: 64px;
+   margin-left: 10px;
+}
+.one {
+
+    width: 800px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: 1px solid #e9ecef;
+    background-color: white;
+}
+
+.one-one {
+    width: 800px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #a5f5ff;
+}
+.del_style{
+    float: right;
+    padding-right: 20px;
+}
+.up_style{
+    float: right;
+    padding-right: 20px;
+}
+
+.one-one p {
+    padding-top: 50px;
+    color: #34aae6;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#list_div {
+    width: 800px;
+    margin: 0 auto;
+    min-height: 300px;
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+#list_w_div{
+    width: 800px;
+    margin: 0px  auto 0 auto;
+    min-height: 300px;
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+.one_by_one{
+    width: 800px;
+    margin: 0 auto;
+    color: #7a7a7a;
+    background-color: #d2d4d6;
+}
+#list_form {
+    margin-top: 40px;
+}
+
+[name=title] {
+    border: 0;
+    width: 260px;
+    height: 30px;
+    outline: none;
+    padding-left: 6px;
+    margin-left: 220px;
+}
+[name=title]:focus{
+    -webkit-box-shadow: inset 0px 0px 2px 2px rgba(12,12,12,.2);
+    -moz-box-shadow: inset 0 0 2px 2px rgba(12,12,12.2);
+    box-shadow: inset 0 0 2px 2px rgba(12,12,12.2);
+} 
+[type=submit] {
+    color: white;
+    font-size: 20px;
+    width: 27px;
+    height: 27px;
+    border: 0;
+    background-color: #00fbc9;
+    position: relative;
+    top: 4px;
+    outline: none;
+}
+
+[type=submit]:hover {
+    background-color: #0cfb6a;
+}
+
+#search {
+    border: 0;
+    width: 27px;
+    height: 27px;
+    color: white;
+    outline: none;
+    font-size: 22px;
+    text-align: center;
+    vertical-align: -2px;
+    background-color: #00fbc9;
+}
+
+#search:hover {
+    background-color: #0cfb6a;
+}
+#reset:hover {
+    background-color: #0cfb6a;
+}
+#reset{
+    border: 0;
+    width: 27px;
+    height: 27px;
+    color: white;
+    outline: none;
+    font-size: 22px;
+    text-align: center;
+    vertical-align: -2px;
+    background-color: #00fbc9;
+}
